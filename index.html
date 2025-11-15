@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/registro.png" type="image/x-icon">
+    <title>Herramientas de IA - Coleccion Completa</title>
+	
+	<!-- PWA CONFIG -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#121212">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Herramientas IA">
+
+<!-- ICONOS -->
+<link rel="icon" href="https://www.google.com/s2/favicons?sz=64&domain=chatgpt.com">
+<link rel="apple-touch-icon" href="https://www.google.com/s2/favicons?sz=64&domain=chatgpt.com">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .buttons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .button {
+            background-color: #2a2a2a;
+            border: 1px solid #444444;
+            color: #e0e0e0;
+            padding: 8px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            background-color: #3a3a3a;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px;
+        }
+        .button-text {
+            display: block;
+        }
+        .home-button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .home-button:hover {
+            background-color: #0055aa;
+        }
+        .section-title {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-bottom: 2px solid #444444;
+            padding-bottom: 5px;
+        }
+        .deep-dream-button,
+        .elevenlabs-button {
+            background-color: #1a3047;
+            color: #e0e0e0;
+            border: 1px solid #2a4a6a;
+        }
+        .deep-dream-button:hover,
+        .elevenlabs-button:hover {
+            background-color: #254567;
+        }
+        .new-ai {
+            background-color: #2a4a2a;
+            border: 1px solid #4a6a4a;
+        }
+        .new-ai:hover {
+            background-color: #3a5a3a;
+        }
+        .music-ai {
+            background-color: #472a4a;
+            border: 1px solid #6a4a6a;
+        }
+        .music-ai:hover {
+            background-color: #5a3a5a;
+        }
+        footer {
+            margin-top: 40px;
+            color: #888888;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .buttons-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 400px) {
+            .buttons-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Herramientas de Inteligencia Artificial - Coleccion Completa</h1>
+    <p>Accede a estas plataformas de IA con un solo clic:</p>
+    
+    <div class="section-title">IAs de Conversacion</div>
+    <div class="buttons-container">
+        <a href="https://claude.ai/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=https://claude.ai" class="icon" alt="Icono de Claude">
+            <span class="button-text">Claude</span>
+        </a>
+        <a href="https://chatgpt.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=chatgpt.com" class="icon" alt="Icono de ChatGPT">
+            <span class="button-text">ChatGPT</span>
+        </a>
+        <a href="https://gemini.google.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=gemini.google.com" class="icon" alt="Icono de Gemini">
+            <span class="button-text">Gemini</span>
+        </a>
+        <a href="https://www.blackbox.ai/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=blackbox.ai" class="icon" alt="Icono de Blackbox">
+            <span class="button-text">Blackbox</span>
+        </a>
+        <a href="https://www.perplexity.ai/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=perplexity.ai" class="icon" alt="Icono de Perplexity">
+            <span class="button-text">Perplexity</span>
+        </a>
+        <a href="https://poe.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=poe.com" class="icon" alt="Icono de Poe">
+            <span class="button-text">Poe</span>
+        </a>
+        <a href="https://chat.mistral.ai/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=chat.mistral.ai" class="icon" alt="Icono de Mistral">
+            <span class="button-text">Mistral</span>
+        </a>
+        <a href="https://copilot.microsoft.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=copilot.microsoft.com" class="icon" alt="Icono de Copilot">
+            <span class="button-text">Copilot</span>
+        </a>
+        <a href="https://pi.ai/talk" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=pi.ai" class="icon" alt="Icono de Pi AI">
+            <span class="button-text">Pi AI</span>
+        </a>
+        <a href="https://you.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=you.com" class="icon" alt="Icono de You.com">
+            <span class="button-text">You.com</span>
+        </a>
+        <a href="https://deepai.org/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=deepai.org" class="icon" alt="Icono de DeepAI">
+            <span class="button-text">DeepAI</span>
+        </a>
+        <a href="https://grok.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=grok.com" class="icon" alt="Icono de Grok">
+            <span class="button-text">Grok</span>
+        </a>
+        <a href="https://huggingface.co/chat" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=huggingface.co" class="icon" alt="Icono de Hugging Chat">
+            <span class="button-text">Hugging Chat</span>
+        </a>
+        <a href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=duckduckgo.com" class="icon" alt="Icono de Duck.ai">
+            <span class="button-text">Duck.ai</span>
+        </a>
+        <a href="https://www.notion.so/chat" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=notion.so" class="icon" alt="Icono de Notion">
+            <span class="button-text">Notion</span>
+        </a>
+        <a href="https://kimi.ai/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=kimi.ai" class="icon" alt="Icono de Kimi">
+            <span class="button-text">Kimi</span>
+        </a>
+        <a href="https://character.ai/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=character.ai" class="icon" alt="Icono de Character.AI">
+            <span class="button-text">Character.AI</span>
+        </a>
+        <a href="https://replika.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=replika.com" class="icon" alt="Icono de Replika">
+            <span class="button-text">Replika</span>
+        </a>
+        <a href="https://www.phind.com/" class="button" title="Buscador de IA avanzado para desarrolladores">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=phind.com" class="icon" alt="Icono de Phind">
+            <span class="button-text">Phind</span>
+        </a>
+        <a href="https://www.meta.ai" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=www.meta.ai" class="icon" alt="Icono de Meta">
+            <span class="button-text">Meta</span>
+        </a>
+        <a href="https://chat.deepseek.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=chat.deepseek.com" class="icon" alt="Icono de deepseek">
+            <span class="button-text">deepseek</span>
+        </a>
+        <a href="https://chat.qwen.ai" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=chat.qwen.ai" class="icon" alt="Icono de Qwen">
+            <span class="button-text">Qwen</span>
+        </a>
+        <a href="https://ernie.baidu.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=ernie.baidu.com" class="icon" alt="Icono de Ernie">
+            <span class="button-text">Ernie</span>
+        </a>
+        <a href="https://deepai.org" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=deepai.org" class="icon" alt="Icono de Deepai">
+            <span class="button-text">Deepai</span>
+        </a>
+    </div>
+    
+    <div class="section-title">IAs de Generacion de Imagenes y Video</div>
+    <div class="buttons-container">
+        <a href="https://huggingface.co/spaces?category=image-generation" class="button deep-dream-button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=huggingface.co" class="icon" alt="Icono de HuggingFace Img">
+            <span class="button-text">HuggingFace Img</span>
+        </a>
+        <a href="https://deepdreamgenerator.com/" class="button deep-dream-button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=deepdreamgenerator.com" class="icon" alt="Icono de Deep Dream">
+            <span class="button-text">Deep Dream</span>
+        </a>
+        <a href="https://openai.com/dall-e-2/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=openai.com" class="icon" alt="Icono de DALL-E">
+            <span class="button-text">DALL-E</span>
+        </a>
+        <a href="https://www.midjourney.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=midjourney.com" class="icon" alt="Icono de Midjourney">
+            <span class="button-text">Midjourney</span>
+        </a>
+        <a href="https://leonardo.ai/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=leonardo.ai" class="icon" alt="Icono de Leonardo.AI">
+            <span class="button-text">Leonardo.AI</span>
+        </a>
+        <a href="https://www.adobe.com/products/firefly.html" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=adobe.com" class="icon" alt="Icono de Adobe Firefly">
+            <span class="button-text">Adobe Firefly</span>
+        </a>
+        <a href="https://runwayml.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=runwayml.com" class="icon" alt="Icono de RunwayML">
+            <span class="button-text">RunwayML</span>
+        </a>
+        <a href="https://www.synthesia.io/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=synthesia.io" class="icon" alt="Icono de Synthesia">
+            <span class="button-text">Synthesia</span>
+        </a>
+        <a href="https://sora.chatgpt.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=openai.com" class="icon" alt="Icono de Sora">
+            <span class="button-text">Sora</span>
+        </a>
+        <a href="https://stablediffusionweb.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=stablediffusionweb.com" class="icon" alt="Icono de Stablediffusionweb">
+            <span class="button-text">Stablediffusionweb</span>
+        </a>
+    </div>
+
+    <div class="section-title">IAs de Generacion de Musica y Audio</div>
+    <div class="buttons-container">
+        <a href="https://elevenlabs.io/" class="button elevenlabs-button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=elevenlabs.io" class="icon" alt="Icono de ElevenLabs">
+            <span class="button-text">ElevenLabs</span>
+        </a>
+        <a href="https://www.aisongmaker.io/es/text-to-song" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=aisongmaker.io" class="icon" alt="Icono de AI Song Maker">
+            <span class="button-text">AI Song Maker</span>
+        </a>
+        <a href="https://aimusicgen.ai/es" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=aimusicgen.ai" class="icon" alt="Icono de AIMusicGen">
+            <span class="button-text">AIMusicGen</span>
+        </a>
+        <a href="https://lyricsintosong.ai/es" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=lyricsintosong.ai" class="icon" alt="Icono de Lyrics Into Song">
+            <span class="button-text">Lyrics to Song</span>
+        </a>
+        <a href="https://makebestmusic.com/es/text-to-music" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=makebestmusic.com" class="icon" alt="Icono de MakeBestMusic">
+            <span class="button-text">MakeBestMusic</span>
+        </a>
+        <a href="https://luvvoice.com/es" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=luvvoice.com" class="icon" alt="Icono de Luvvoice">
+            <span class="button-text">Luvvoice</span>
+        </a>
+        <a href="https://musicgeneratorai.com/" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=musicgeneratorai.com" class="icon" alt="Icono de Music Generator AI">
+            <span class="button-text">Music Generator AI</span>
+        </a>
+        <a href="https://www.wondera.ai/" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=wondera.ai" class="icon" alt="Icono de Wondera">
+            <span class="button-text">Wondera</span>
+        </a>
+        <a href="https://suno.com/" class="button music-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=suno.com" class="icon" alt="Icono de Suno">
+            <span class="button-text">Suno</span>
+        </a>
+    </div>
+    
+    <div class="section-title">IAs de Escritura y Productividad</div>
+    <div class="buttons-container">
+        <a href="https://www.jasper.ai/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=jasper.ai" class="icon" alt="Icono de Jasper.AI">
+            <span class="button-text">Jasper.AI</span>
+        </a>
+        <a href="https://www.copy.ai/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=copy.ai" class="icon" alt="Icono de Copy.ai">
+            <span class="button-text">Copy.ai</span>
+        </a>
+        <a href="https://writesonic.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=writesonic.com" class="icon" alt="Icono de Writesonic">
+            <span class="button-text">Writesonic</span>
+        </a>
+        <a href="https://www.grammarly.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=grammarly.com" class="icon" alt="Icono de Grammarly">
+            <span class="button-text">Grammarly</span>
+        </a>
+    </div>
+
+    <div class="section-title">Correos Temporales</div>
+    <div class="buttons-container">
+        <a href="https://www.fakemailgenerator.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=fakemailgenerator.com" class="icon" alt="Icono de Fake Mail Generator">
+            <span class="button-text">Fake Mail Generator</span>
+        </a>
+        <a href="https://tempail.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=tempail.com" class="icon" alt="Icono de Tempail">
+            <span class="button-text">Tempail</span>
+        </a>
+        <a href="https://temp-mail.io/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=temp-mail.io" class="icon" alt="Icono de Temp Mail">
+            <span class="button-text">Temp Mail</span>
+        </a>
+        <a href="https://www.guerrillamail.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=guerrillamail.com" class="icon" alt="Icono de Guerrilla Mail">
+            <span class="button-text">Guerrilla Mail</span>
+        </a>
+        <a href="https://internxt.com/es/temporary-email" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=internxt.com" class="icon" alt="Icono de Internxt">
+            <span class="button-text">Internxt</span>
+        </a>
+        <a href="https://www.emailondeck.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=emailondeck.com" class="icon" alt="Icono de Email On Deck">
+            <span class="button-text">Email On Deck</span>
+        </a>
+        <a href="https://adguard.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=adguard.com" class="icon" alt="Icono de AdGuard">
+            <span class="button-text">AdGuard</span>
+        </a>
+        <a href="https://temp-mail.org/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=temp-mail.org" class="icon" alt="Icono de Temp-Mail.org">
+            <span class="button-text">Temp-Mail.org</span>
+        </a>
+        <a href="https://tmailor.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=tmailor.com" class="icon" alt="Icono de Tmailor">
+            <span class="button-text">Tmailor</span>
+        </a>
+        <a href="https://www.moakt.com/" class="button new-ai">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=moakt.com" class="icon" alt="Icono de Moakt">
+            <span class="button-text">Moakt</span>
+        </a>
+        <a href="https://www.moakt.email/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=moakt.email" class="icon" alt="Icono de Moakt">
+            <span class="button-text">Moakt</span>
+        </a>
+        <a href="https://dropmail.me/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=dropmail.me" class="icon" alt="Icono de Dropmail">
+            <span class="button-text">Dropmail</span>
+        </a>
+        <a href="https://www.mintemail.com/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=mintemail.com" class="icon" alt="Icono de MintEmail">
+            <span class="button-text">MintEmail</span>
+        </a>
+        <a href="https://tmail.link/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=tmail.link" class="icon" alt="Icono de Tmail">
+            <span class="button-text">Tmail</span>
+        </a>
+        <a href="https://www.temporary-mail.net/" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=temporary-mail.net" class="icon" alt="Icono de Temporary Mail">
+            <span class="button-text">Temporary Mail</span>
+        </a>
+        <a href="https://inboxes.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=inboxes.com" class="icon" alt="Icono de Inboxes">
+           <span class="button-text">Inboxes</span>
+        </a>
+        <a href="https://yopmail.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=yopmail.com" class="icon" alt="Icono de Yopmail">
+            <span class="button-text">Yopmail</span>
+        </a>
+        <a href="https://10minutemail.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=10minutemail.com" class="icon" alt="Icono de 10minutemail">
+            <span class="button-text">10minutemail</span>
+        </a>
+    </div>
+     
+    <div class="section-title">Nube</div>
+    <div class="buttons-container">
+        <a href="https://my.pcloud.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=my.pcloud.com" class="icon" alt="Icono de My">
+            <span class="button-text">My</span>
+        </a>
+    </div>
+     
+    <div class="section-title">Hosting gratis</div>
+    <div class="buttons-container">
+        <a href="https://app.netlify.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=app.netlify.com" class="icon" alt="Icono de App">
+            <span class="button-text">App</span>
+        </a>
+    </div>
+     
+    <div class="section-title">📚 Asistentes de Estudio/Investigación</div>
+    <div class="buttons-container">
+        <a href="https://app.humata.ai" class="button">
+            <img src="https://app.humata.ai/favicon.ico" class="icon" alt="Icono de App">
+            <span class="button-text">Humata</span>
+        </a>
+        <a href="https://www.chatpdf.com" class="button">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=www.chatpdf.com" class="icon" alt="Icono de Chatpdf">
+            <span class="button-text">Chatpdf</span>
+        </a>
+    </div>
+    
+    <footer>
+        <p>Una coleccion completa de las mejores herramientas de IA disponibles en 2025</p>
+    </footer>
+	
+	<script>
+// Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(function(registration) {
+      console.log('Service Worker registrado con éxito:', registration);
+    })
+    .catch(function(error) {
+      console.log('Error al registrar Service Worker:', error);
+    });
+}
+
+// Detectar si es PWA
+function isRunningStandalone() {
+  return (window.matchMedia('(display-mode: standalone)').matches) || 
+         (window.navigator.standalone) || 
+         (document.referrer.includes('android-app://'));
+}
+
+if (isRunningStandalone()) {
+  console.log("Ejecutando como PWA");
+  document.body.classList.add('pwa-mode');
+}
+</script>
+ <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4991123,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4991123&101" alt="contador gratis" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+</html>
