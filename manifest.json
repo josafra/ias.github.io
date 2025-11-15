@@ -2,25 +2,26 @@
   "name": "Herramientas IA",
   "short_name": "HerramientasIA",
   "description": "Colección completa de herramientas de IA",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/ias/",
+  "scope": "/ias/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#121212",
   "orientation": "any",
   "icons": [
     {
-      "src": "faviconV0.png",
+      "src": "/ias/faviconV0.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "faviconV0.png",
+      "src": "/ias/faviconV0.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "categories": ["productivity", "utilities"]
+}
 }
